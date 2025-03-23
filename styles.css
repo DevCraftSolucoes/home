@@ -1,1 +1,846 @@
-#particles-js,header{position:fixed;width:100%}.logo,nav ul,section{display:flex}body,nav a{color:#fff}.container,.header-container{margin:0 auto;max-width:1200px}footer p a,nav a{text-decoration:none}#portfolio,.form-group,.logo,button,footer,nav a{position:relative}#portfolio-canvas,#portfolio::before{left:0;height:100%;position:absolute}.case-card,.portfolio-card,.service-card,.team-card{box-shadow:0 10px 20px rgba(0,0,0,.2);background:rgba(255,255,255,.05)}.hero,.portfolio-card,.stats,footer{text-align:center}.portfolio-img{object-fit:cover;object-fit:cover}*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}body{padding-top:80px;background:#0a0a15;line-height:1.6;overflow-x:hidden;transition:background-color .3s,color .3s}#particles-js{height:100%;z-index:-1}header{top:0;background:rgba(10,10,21,.95);backdrop-filter:blur(10px);z-index:1000;box-shadow:0 2px 5px rgba(0,0,0,.5);transition:background .3s,box-shadow .3s}.header-container{padding:15px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}.logo{align-items:center;justify-content:center;perspective:1000px;transition:transform .4s,box-shadow .4s}.logo:hover{transform:rotateY(20deg) rotateX(15deg) scale(1.3);box-shadow:0 30px 60px rgba(0,221,235,.7),0 0 30px #f0f}.logo::before{content:"";position:absolute;top:-20px;left:-20px;right:-20px;bottom:-20px;border-radius:50%;background:radial-gradient(circle,rgba(0,221,235,.5),transparent);opacity:0;transition:opacity .4s,transform .4s;z-index:-1}.logo:hover::before{opacity:1;transform:scale(1.5)}.logo-img{width:80px;height:80px;border-radius:50%;transition:transform .4s,filter .4s}.logo:hover .logo-img{transform:rotate(-15deg);filter:drop-shadow(0 0 15px #00ddeb) drop-shadow(0 0 30px #ff00ff)}nav ul{list-style:none;gap:15px}nav a{padding:10px 15px;font-size:1rem;transition:color .3s,transform .3s,box-shadow .3s}nav a:hover{color:#00ddeb;transform:translateZ(5px) rotateY(5deg);box-shadow:0 0 10px #00ddeb,0 0 20px #00ddeb}nav a::after{content:"";position:absolute;bottom:0;left:50%;width:0;height:2px;background:#00ddeb;transition:width .3s,left .3s}nav a:hover::after{width:100%;left:0}.container{padding:0 15px}section{padding:80px 0;align-items:center;min-height:100vh}.hero{padding-top:120px}h1{font-size:clamp(2.5rem, 5vw, 4.5rem);background:linear-gradient(45deg,#00ddeb,#f0f,#00ddeb);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:4s infinite gradientFlow}@keyframes gradientFlow{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}h2{font-size:clamp(1.8rem, 4vw, 2.5rem);margin-bottom:20px}p{font-size:clamp(1rem, 2.5vw, 1.2rem)}.cases-grid,.portfolio-grid,.services-grid,.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px}.cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:40px}.case-card,.service-card,.team-card{padding:30px;border-radius:20px;position:relative;transition:transform .3s}button,input,select,textarea{border:none;font-size:1rem;width:100%}.stat-item,button,label{transition:.3s}.case-card::before,.service-card::before,.team-card::before{content:"";position:absolute;top:-15px;left:-15px;right:-15px;bottom:-15px;background:radial-gradient(circle at center,rgba(0,221,235,.2) 0,transparent 70%);opacity:0;animation:3s infinite pulse}.case-card:hover,.portfolio-card:hover,.service-card:hover,.team-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,221,235,.3)}.case-card:hover::before,.color-option:hover::after,.service-card:hover::before,.team-card:hover::before,button:hover::after{opacity:1}@keyframes pulse{0%,100%{transform:scale(1);opacity:.2}50%{transform:scale(1.1);opacity:.4}}.form-group{margin-bottom:25px}input,select,textarea{padding:12px;border-radius:10px;background:rgba(255,255,255,.1);color:#fff;transition:.3s}input:focus,select:focus,textarea:focus{transform:translateY(-2px);box-shadow:0 15px 25px rgba(0,221,235,.4)}.stat-item:hover,button:hover{transform:translateY(-5px)}label{position:absolute;top:12px;left:12px;color:#aaa;pointer-events:none;font-size:1rem}input:focus+label,input:valid+label,select:focus+label,select:valid+label,textarea:focus+label,textarea:valid+label{top:-10px;left:10px;font-size:.8rem;color:#00ddeb;background:#0a0a15;padding:0 5px}button{background:linear-gradient(45deg,#00ddeb,#f0f);padding:12px 30px;border-radius:25px;color:#fff;cursor:pointer;max-width:200px;margin:0 auto;display:block}.color-option::after,footer{background:rgba(0,0,0,.8);color:#fff}button:hover{box-shadow:0 20px 40px rgba(0,221,235,.5)}button::after{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:rgba(255,255,255,.2);animation:2s infinite ripple;opacity:0}@keyframes ripple{0%{transform:scale(0)}100%{transform:scale(2);opacity:0}}footer{width:100%;padding:20px;z-index:10;box-shadow:0 -2px 5px rgba(0,0,0,.5);margin-top:40px}footer p a{color:#00ddeb;transition:color .3s}footer p a:hover{color:#f0f}.stats{display:flex;justify-content:space-around;margin-top:30px;flex-wrap:wrap;gap:20px}.stat-item{padding:15px;flex:1 1 100px}#portfolio{padding:80px 0;background:0 0;color:#fff;overflow:hidden}#portfolio::before{content:"";top:0;width:100%;z-index:-1;background:linear-gradient(45deg,#0a0a15,#1a1a2e);opacity:.3}#portfolio-canvas{top:0;width:100%;z-index:-1}.portfolio-card{box-shadow:0 10px 20px rgba(0,0,0,.2);width:200px;height:auto}.color-option:hover,.portfolio-img{box-shadow:0 5px 15px rgba(0,0,0,.3)}.color-palette{position:fixed;top:50%;left:20px;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:1000}.color-option{width:40px;height:40px;border:none;border-radius:50%;cursor:pointer;position:relative;transition:transform .3s,box-shadow .3s}.color-option:hover{transform:scale(1.2)}.portfolio-card:hover,.tech-img:hover{box-shadow:0 10px 20px rgba(0,0,0,.5)}.color-option::after{content:attr(title);position:absolute;top:50%;left:50px;transform:translateY(-50%);padding:5px 10px;border-radius:5px;font-size:.9rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s}.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.reveal.visible{opacity:1;transform:translateY(0)}@media (max-width:1024px){section{padding:60px 0}.hero{padding-top:100px}.cases-grid,.services-grid,.team-grid{gap:20px}.case-card,.service-card,.team-card{padding:25px}nav a{padding:8px 12px}}@media (max-width:768px){.header-container{flex-direction:column;padding:10px;text-align:center}nav ul{flex-direction:column;padding:10px 0;gap:5px}nav a{padding:10px;font-size:1.1rem}section{padding:40px 0;min-height:auto}.hero{padding-top:120px}.cases-grid,.services-grid,.team-grid{grid-template-columns:1fr;gap:15px;grid-template-columns:1fr}.case-card,.service-card,.team-card{padding:20px}.stats{flex-direction:column;gap:15px}button{max-width:180px}h1{animation:4s infinite gradientFlow}header .header-container,nav ul{flex-direction:column;align-items:center}.carousel-track{display:flex;flex-direction:column;align-items:center}}@media (min-width:769px){nav ul{flex-direction:row;justify-content:flex-end;align-items:center}nav a{padding:10px 20px;font-size:1.1rem}}@media (min-width:1024px){.header-container{max-width:1200px;margin:0 auto;padding:15px;display:flex;justify-content:space-between;align-items:center}nav ul{display:flex;list-style:none;gap:20px}nav a{font-size:1.1rem;padding:10px 20px}}@media (max-width:480px){.container{padding:0 10px}.header-container{padding:5px}.logo,h2{font-size:1.5rem}h1{font-size:2rem}button,label,p{font-size:.9rem}input,select,textarea{padding:10px;font-size:.9rem}button{padding:10px 20px;max-width:150px}.case-card,.service-card,.team-card{padding:15px}footer{padding:20px 10px}}.portfolio-card{padding:0;border:none}.portfolio-img{border-radius:10px;margin-bottom:10px}.carousel-button{display:flex;justify-content:center;align-items:center}.carousel{position:relative;width:100%;max-width:1200px;margin:0 auto;overflow:hidden;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,.3)}.portfolio-card,.tech-img{box-shadow:0 5px 15px rgba(0,0,0,.3)}.carousel-track{display:flex;gap:20px;transition:transform .5s;width:max-content}.portfolio-card{flex:0 0 calc(33.33% - 20px);border-radius:10px;overflow:hidden;transition:transform .3s,box-shadow .3s,background .3s}.portfolio-card:hover{transform:scale(1.05);background:rgba(0,221,235,.1)}.portfolio-img{width:100%;height:200px;object-fit:cover;border-bottom:2px solid rgba(255,255,255,.1)}.portfolio-card h3{font-size:1.2rem;margin:10px 0;color:#fff}.portfolio-card p{font-size:.9rem;color:#ccc;margin-bottom:10px}.carousel-button{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.7);color:#fff;border:none;border-radius:50%;width:50px;height:50px;cursor:pointer;z-index:1000;display:flex;justify-content:center;align-items:center;transition:background .3s,transform .3s}.carousel-button:hover{background:rgba(255,255,255,.9);color:#000;transform:translateY(-50%) scale(1.1)}.carousel-button.prev{left:10px}.carousel-button.next{right:10px}.tech-img{width:100%;max-width:600px;height:auto;margin:20px 0;border-radius:10px;transition:transform .3s,box-shadow .3s}.tech-img:hover{transform:scale(1.05)}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Arial",sans-serif}body{padding-top:80px;background:#0a0a15;color:#fff;line-height:1.6;overflow-x:hidden;transition:background-color .3s ease,color .3s ease}#particles-js{position:fixed;width:100%;height:100%;z-index:-1}header{position:fixed;top:0;width:100%;background:rgba(10,10,21,.95);backdrop-filter:blur(10px);z-index:1000;box-shadow:0 2px 5px rgba(0,0,0,.5);transition:background .3s ease,box-shadow .3s ease}
+.header-container {
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 15px; /* Espaçamento interno */
+  display: flex; /* Layout flexível */
+  justify-content: space-between; /* Espaça os itens */
+  align-items: center; /* Alinha os itens verticalmente */
+  flex-wrap: wrap; /* Permite quebra de linha */
+}
+
+/* Estilo do logo */
+.logo {
+  display: flex; /* Layout flexível */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  perspective: 1000px; /* Define a perspectiva para o efeito 3D */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transições suaves */
+  position: relative; /* Necessário para o brilho */
+}
+
+.logo:hover {
+  transform: rotateY(20deg) rotateX(15deg) scale(1.3); /* Efeito 3D e expansão */
+  box-shadow: 0 30px 60px rgba(0, 221, 235, 0.7), 0 0 30px #ff00ff; /* Sombra futurista */
+}
+
+/* Adiciona um brilho pulsante ao redor da logo */
+.logo::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%; /* Torna o brilho circular */
+  background: radial-gradient(circle, rgba(0, 221, 235, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Transições suaves */
+  z-index: -1; /* Fica atrás da logo */
+}
+
+.logo:hover::before {
+  opacity: 1; /* Torna o brilho visível */
+  transform: scale(1.5); /* Expande o brilho */
+}
+
+/* Estilo da imagem dentro da logo */
+.logo-img {
+  width: 80px; /* Largura da imagem */
+  height: 80px; /* Altura da imagem */
+  border-radius: 50%; /* Torna a imagem circular */
+  transition: transform 0.4s ease, filter 0.4s ease; /* Transições suaves */
+}
+
+.logo:hover .logo-img {
+  transform: rotate(-15deg); /* Leve rotação da imagem ao passar o mouse */
+  filter: drop-shadow(0 0 15px #00ddeb) drop-shadow(0 0 30px #ff00ff); /* Brilho futurista */
+}
+
+/* Estilo da lista de navegação */
+nav ul {
+  display: flex; /* Layout flexível */
+  list-style: none; /* Remove marcadores da lista */
+  gap: 15px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos links de navegação */
+nav a {
+  color: #fff; /* Texto branco */
+  text-decoration: none; /* Remove sublinhado */
+  padding: 10px 15px; /* Espaçamento interno */
+  position: relative; /* Necessário para o efeito de sublinhado */
+  font-size: 1rem; /* Tamanho do texto */
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+nav a:hover {
+  color: #00ddeb; /* Altera a cor ao passar o mouse */
+  transform: translateZ(5px) rotateY(5deg); /* Leve efeito 3D */
+  box-shadow: 0 0 10px #00ddeb, 0 0 20px #00ddeb; /* Efeito de brilho */
+}
+
+/* Efeito de sublinhado animado */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #00ddeb; /* Cor do sublinhado */
+  transition: width 0.3s ease, left 0.3s ease; /* Transições suaves */
+}
+
+nav a:hover::after {
+  width: 100%; /* Expande o sublinhado */
+  left: 0; /* Centraliza o sublinhado */
+}
+
+/* Container geral */
+.container {
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 15px; /* Espaçamento interno */
+}
+
+/* Estilo das seções */
+section {
+  padding: 80px 0; /* Espaçamento vertical */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Alinha verticalmente */
+  min-height: 100vh; /* Altura mínima de 100% da tela */
+}
+
+/* Estilo da seção hero */
+.hero {
+  text-align: center; /* Centraliza o texto */
+  padding-top: 120px; /* Espaço extra para o cabeçalho fixo */
+}
+
+/* Estilo do título principal */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem); /* Tamanho responsivo */
+  background: linear-gradient(45deg, #00ddeb, #ff00ff, #00ddeb); /* Gradiente no texto */
+  background-size: 200% 200%; /* Animação do gradiente */
+  -webkit-background-clip: text; /* Aplica gradiente apenas no texto */
+  background-clip: text;
+  color: transparent; /* Torna o fundo transparente */
+  animation: gradientFlow 4s ease infinite; /* Animação contínua */
+}
+
+/* Animação do gradiente */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Estilo dos subtítulos */
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Tamanho responsivo */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilo dos parágrafos */
+p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Tamanho responsivo */
+}
+
+/* Grid para serviços, cases e equipe */
+.services-grid,
+.cases-grid,
+.team-grid {
+  display: grid; /* Layout em grade */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+  gap: 30px; /* Espaçamento entre os itens */
+  margin-top: 40px; /* Espaçamento superior */
+}
+
+.cases-grid {
+  display: grid; /* Layout em grade */
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 30px; /* Espaçamento entre os itens */
+  margin-top: 40px; /* Espaçamento superior */
+}
+
+/* Estilo dos cartões */
+.service-card,
+.case-card,
+.team-card {
+  background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
+  padding: 30px; /* Espaçamento interno */
+  border-radius: 20px; /* Bordas arredondadas */
+  position: relative; /* Necessário para o efeito de brilho */
+  transition: transform 0.3s ease; /* Transição suave */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Efeito de brilho nos cartões */
+.service-card::before,
+.case-card::before,
+.team-card::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: radial-gradient(circle at center, rgba(0, 221, 235, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  animation: pulse 3s infinite; /* Animação de pulsação */
+}
+
+.service-card:hover,
+.case-card:hover,
+.team-card:hover {
+  transform: translateY(-5px); /* Eleva o cartão ao passar o mouse */
+  box-shadow: 0 20px 40px rgba(0, 221, 235, 0.3); /* Sombra mais intensa */
+}
+
+.service-card:hover::before,
+.case-card:hover::before,
+.team-card:hover::before {
+  opacity: 1; /* Torna o brilho visível */
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+}
+
+/* Estilo dos grupos de formulário */
+.form-group {
+  margin-bottom: 25px; /* Espaçamento inferior */
+  position: relative; /* Necessário para o efeito de label */
+}
+
+/* Estilo dos inputs, textareas e selects */
+input,
+textarea,
+select {
+  width: 100%; /* Largura total */
+  padding: 12px; /* Espaçamento interno */
+  border: none; /* Remove bordas */
+  border-radius: 10px; /* Bordas arredondadas */
+  background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+  color: #fff; /* Texto branco */
+  transition: all 0.3s ease; /* Transição suave */
+  font-size: 1rem; /* Tamanho do texto */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  transform: translateY(-2px); /* Eleva o input ao focar */
+  box-shadow: 0 15px 25px rgba(0, 221, 235, 0.4); /* Sombra ao focar */
+}
+
+/* Estilo das labels */
+label {
+  position: absolute; /* Posição absoluta */
+  top: 12px; /* Posição inicial */
+  left: 12px; /* Posição inicial */
+  color: #aaa; /* Cor do texto */
+  transition: all 0.3s ease; /* Transição suave */
+  pointer-events: none; /* Desabilita eventos */
+  font-size: 1rem; /* Tamanho do texto */
+}
+
+input:focus + label,
+input:valid + label,
+textarea:focus + label,
+textarea:valid + label,
+select:focus + label,
+select:valid + label {
+  top: -10px; /* Posição ao focar */
+  left: 10px; /* Posição ao focar */
+  font-size: 0.8rem; /* Tamanho ao focar */
+  color: #00ddeb; /* Cor ao focar */
+  background: #0a0a15; /* Fundo ao focar */
+  padding: 0 5px; /* Espaçamento ao focar */
+}
+
+/* Estilo dos botões */
+button {
+  background: linear-gradient(45deg, #00ddeb, #ff00ff); /* Gradiente no botão */
+  border: none; /* Remove bordas */
+  padding: 12px 30px; /* Espaçamento interno */
+  border-radius: 25px; /* Bordas arredondadas */
+  color: #fff; /* Texto branco */
+  cursor: pointer; /* Cursor de clique */
+  position: relative; /* Necessário para o efeito de brilho */
+  transition: all 0.3s ease; /* Transição suave */
+  font-size: 1rem; /* Tamanho do texto */
+  width: 100%; /* Largura total */
+  max-width: 200px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza o botão */
+  display: block; /* Exibe como bloco */
+}
+
+button:hover {
+  transform: translateY(-5px); /* Eleva o botão ao passar o mouse */
+  box-shadow: 0 20px 40px rgba(0, 221, 235, 0.5); /* Sombra mais intensa */
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2); /* Brilho */
+  animation: ripple 2s infinite; /* Animação de brilho */
+  opacity: 0;
+}
+
+button:hover::after {
+  opacity: 1; /* Torna o brilho visível */
+}
+
+/* Animação de brilho */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Estilo do rodapé */
+footer {
+  position: relative; /* Altere para relativo para evitar sobreposição */
+  width: 100%; /* Garante que ocupe toda a largura */
+  background: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+  text-align: center; /* Centraliza o texto */
+  padding: 20px; /* Espaçamento interno */
+  color: #fff; /* Texto branco */
+  z-index: 10; /* Garante que fique acima de outros elementos */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra acima do rodapé */
+  margin-top: 40px; /* Espaçamento superior para separação */
+}
+
+footer p a {
+  color: #00ddeb; /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado */
+  transition: color 0.3s ease; /* Transição suave */
+}
+
+footer p a:hover {
+  color: #ff00ff; /* Cor ao passar o mouse */
+}
+
+/* Estilo das estatísticas */
+.stats {
+  display: flex; /* Layout flexível */
+  justify-content: space-around; /* Espaça os itens */
+  margin-top: 30px; /* Espaçamento superior */
+  text-align: center; /* Centraliza o texto */
+  flex-wrap: wrap; /* Permite quebra de linha */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos itens de estatísticas */
+.stat-item {
+  padding: 15px; /* Espaçamento interno */
+  transition: all 0.3s ease; /* Transição suave */
+  flex: 1 1 100px; /* Tamanho flexível */
+}
+
+.stat-item:hover {
+  transform: translateY(-5px); /* Eleva o item ao passar o mouse */
+}
+
+/* Estilo das revelações */
+.reveal {
+  opacity: 0; /* Invisível inicialmente */
+  transform: translateY(50px); /* Posição inicial */
+  transition: all 0.6s ease; /* Transição suave */
+}
+
+.reveal.visible {
+  opacity: 1; /* Visível ao ser revelado */
+  transform: translateY(0); /* Posição final */
+}
+
+/* Estilo da seção de portfólio */
+#portfolio {
+  position: relative; /* Necessário para o fundo animado */
+  padding: 80px 0; /* Espaçamento vertical */
+  background: transparent; /* Fundo transparente para exibir partículas */
+  color: #fff; /* Texto branco */
+  overflow: hidden; /* Esconde partículas fora da seção */
+}
+
+#portfolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Fica atrás do conteúdo */
+  background: linear-gradient(45deg, #0a0a15, #1a1a2e); /* Gradiente como alternativa */
+  opacity: 0.3; /* Transparência do fundo */
+}
+
+#portfolio-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Fica atrás do conteúdo */
+}
+
+.portfolio-grid {
+  display: grid; /* Layout em grade */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+  gap: 30px; /* Espaçamento entre os itens */
+  margin-top: 40px; /* Espaçamento superior */
+}
+
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 15px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Adiciona transição para o fundo */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+  width: 200px; /* Define largura menor */
+  height: auto; /* Altura proporcional */
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px); /* Eleva o cartão ao passar o mouse */
+  box-shadow: 0 20px 40px rgba(0, 221, 235, 0.3); /* Sombra mais intensa */
+  background: rgba(0, 221, 235, 0.1); /* Troca a cor do fundo ao passar o mouse */
+}
+
+/* Ajuste das imagens do portfólio para formato retangular */
+.portfolio-img {
+  width: 120%; /* Aumenta a largura para 120% do cartão */
+  height: 100px; /* Mantém a altura fixa */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px); /* Eleva o cartão ao passar o mouse */
+  box-shadow: 0 20px 40px rgba(0, 221, 235, 0.3); /* Sombra mais intensa */
+}
+
+.portfolio-card h3 {
+  font-size: 1.5rem; /* Tamanho do título */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.portfolio-card p {
+  font-size: 1rem; /* Tamanho do texto */
+  color: #ccc; /* Cor do texto */
+}
+
+/* Paleta de cores minimalista */
+.color-palette {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.color-option {
+  width: 40px; /* Reduz o tamanho dos botões */
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative; /* Necessário para o tooltip */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.2); /* Aumenta o botão ao passar o mouse */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+}
+
+/* Tooltip para exibir o nome da cor */
+.color-option::after {
+  content: attr(title); /* Usa o atributo title como texto */
+  position: absolute;
+  top: 50%;
+  left: 50px; /* Posiciona à direita do botão */
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+  color: #fff; /* Texto branco */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 0.9rem; /* Tamanho do texto */
+  white-space: nowrap; /* Impede quebra de linha */
+  opacity: 0; /* Invisível por padrão */
+  pointer-events: none; /* Desabilita interação */
+  transition: opacity 0.3s ease; /* Transição suave */
+}
+
+.color-option:hover::after {
+  opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+/* Animação de revelação */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+  section {
+    padding: 60px 0; /* Reduz espaçamento vertical */
+  }
+  .hero {
+    padding-top: 100px; /* Reduz espaço extra para o cabeçalho fixo */
+  }
+  .services-grid,
+  .cases-grid,
+  .team-grid {
+    gap: 20px; /* Reduz espaçamento entre os itens */
+  }
+  .service-card,
+  .case-card,
+  .team-card {
+    padding: 25px; /* Reduz espaçamento interno */
+  }
+  nav a {
+    padding: 8px 12px; /* Reduz espaçamento interno dos links */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Alinha itens em coluna */
+    padding: 10px; /* Reduz espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+  }
+  nav ul {
+    flex-direction: column; /* Alinha itens em coluna */
+    padding: 10px 0; /* Espaçamento interno */
+    gap: 5px; /* Reduz espaçamento entre os itens */
+  }
+  nav a {
+    padding: 10px; /* Espaçamento interno dos links */
+    font-size: 1.1rem; /* Aumenta tamanho do texto */
+  }
+  section {
+    padding: 40px 0; /* Reduz espaçamento vertical */
+    min-height: auto; /* Remove altura mínima */
+  }
+  .hero {
+    padding-top: 120px; /* Espaço extra para o cabeçalho fixo */
+  }
+  .services-grid,
+  .cases-grid,
+  .team-grid {
+    grid-template-columns: 1fr; /* Coluna única */
+    gap: 15px; /* Reduz espaçamento entre os itens */
+  }
+  .service-card,
+  .case-card,
+  .team-card {
+    padding: 20px; /* Reduz espaçamento interno */
+  }
+  .stats {
+    flex-direction: column; /* Alinha itens em coluna */
+    gap: 15px; /* Reduz espaçamento entre os itens */
+  }
+  button {
+    max-width: 180px; /* Reduz largura máxima */
+  }
+  h1 {
+    animation: gradientFlow 4s ease infinite; /* Animação contínua */
+  }
+
+  header .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-grid,
+  .cases-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 769px) {
+  nav ul {
+    flex-direction: row; /* Alinha itens em linha */
+    justify-content: flex-end; /* Alinha itens à direita */
+    align-items: center; /* Alinha itens verticalmente */
+  }
+  nav a {
+    padding: 10px 20px; /* Espaçamento interno dos links */
+    font-size: 1.1rem; /* Aumenta tamanho do texto */
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 15px; /* Espaçamento interno */
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaça os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+  }
+
+  nav ul {
+    display: flex; /* Layout flexível */
+    list-style: none; /* Remove marcadores da lista */
+    gap: 20px; /* Espaçamento entre os itens */
+  }
+
+  nav a {
+    font-size: 1.1rem; /* Aumenta tamanho do texto */
+    padding: 10px 20px; /* Espaçamento interno dos links */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px; /* Reduz espaçamento interno */
+  }
+  .header-container {
+    padding: 5px; /* Reduz espaçamento interno */
+  }
+  .logo {
+    font-size: 1.5rem; /* Reduz tamanho do texto */
+  }
+  h1 {
+    font-size: 2rem; /* Reduz tamanho do texto */
+  }
+  h2 {
+    font-size: 1.5rem; /* Reduz tamanho do texto */
+  }
+  p {
+    font-size: 0.9rem; /* Reduz tamanho do texto */
+  }
+  input,
+  textarea,
+  select {
+    padding: 10px; /* Reduz espaçamento interno */
+    font-size: 0.9rem; /* Reduz tamanho do texto */
+  }
+  label {
+    font-size: 0.9rem; /* Reduz tamanho do texto */
+  }
+  button {
+    padding: 10px 20px; /* Reduz espaçamento interno */
+    font-size: 0.9rem; /* Reduz tamanho do texto */
+    max-width: 150px; /* Reduz largura máxima */
+  }
+  .service-card,
+  .case-card,
+  .team-card {
+    padding: 15px; /* Reduz espaçamento interno */
+  }
+  footer {
+    padding: 20px 10px; /* Reduz espaçamento interno */
+  }
+}
+
+/* Ajuste do carrossel */
+.carousel-track {
+  display: flex; /* Usa flexbox para layout horizontal */
+  gap: 20px; /* Espaçamento entre as imagens */
+  transition: transform 0.5s ease; /* Transição suave ao rolar */
+  width: max-content; /* Garante que o track tenha largura suficiente para rolar */
+}
+
+.portfolio-card {
+  background: none; /* Remove o fundo do cartão */
+  padding: 0; /* Remove o espaçamento interno */
+  border: none; /* Remove bordas */
+  text-align: center; /* Centraliza o texto */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-img {
+  width: 100%; /* Largura total do cartão */
+  height: 200px; /* Define a altura da imagem */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra para destaque */
+}
+
+/* Posiciona os botões do carrossel mais próximos */
+.carousel-button {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  color: #fff; /* Cor do texto */
+  border: none; /* Remove bordas */
+  border-radius: 50%; /* Botões circulares */
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: rgba(255, 255, 255, 0.8); /* Fundo mais claro ao passar o mouse */
+  transform: translateY(-50%) scale(1.1); /* Leve aumento ao passar o mouse */
+}
+
+.carousel-button.prev {
+  left: -50px; /* Posiciona no canto esquerdo, mais próximo do carrossel */
+}
+
+.carousel-button.next {
+  right: -50px; /* Posiciona no canto direito, mais próximo do carrossel */
+}
+
+/* Ajuste do carrossel para exibir 3 imagens por vez */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza o carrossel */
+  overflow: hidden; /* Esconde imagens fora da área visível */
+  border-radius: 15px; /* Bordas arredondadas para o carrossel */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+}
+
+.carousel-track {
+  display: flex; /* Usa flexbox para layout horizontal */
+  gap: 20px; /* Espaçamento entre as imagens */
+  transition: transform 0.5s ease; /* Transição suave ao rolar */
+  width: max-content; /* Garante que o track tenha largura suficiente para rolar */
+}
+
+.portfolio-card {
+  flex: 0 0 calc(33.33% - 20px); /* Cada cartão ocupa 1/3 da largura com espaçamento */
+  background: rgba(255, 255, 255, 0.05); /* Fundo semi-transparente */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+  overflow: hidden; /* Esconde conteúdo que ultrapassa o cartão */
+  text-align: center; /* Centraliza o texto */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Adiciona transição para o fundo */
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+  background: rgba(0, 221, 235, 0.1); /* Troca a cor do fundo ao passar o mouse */
+}
+
+.portfolio-img {
+  width: 100%; /* Largura total do cartão */
+  height: 200px; /* Altura fixa */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Linha decorativa abaixo da imagem */
+}
+
+.portfolio-card h3 {
+  font-size: 1.2rem; /* Tamanho do título */
+  margin: 10px 0; /* Espaçamento superior e inferior */
+  color: #fff; /* Texto branco */
+}
+
+.portfolio-card p {
+  font-size: 0.9rem; /* Tamanho do texto */
+  color: #ccc; /* Cor mais clara para o texto */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Botões do carrossel */
+.carousel-button {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  color: #fff; /* Cor do texto */
+  border: none; /* Remove bordas */
+  border-radius: 50%; /* Botões circulares */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: rgba(255, 255, 255, 0.9); /* Fundo mais claro ao passar o mouse */
+  color: #000; /* Texto preto ao passar o mouse */
+  transform: translateY(-50%) scale(1.1); /* Leve aumento ao passar o mouse */
+}
+
+.carousel-button.prev {
+  left: 10px; /* Posiciona no canto esquerdo */
+}
+
+.carousel-button.next {
+  right: 10px; /* Posiciona no canto direito */
+}
+
+/* Estilo das imagens das seções */
+.tech-img {
+  width: 100%; /* Largura total */
+  max-width: 600px; /* Largura máxima */
+  height: auto; /* Altura proporcional */
+  margin: 20px 0; /* Espaçamento superior e inferior */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+.tech-img:hover {
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+}
